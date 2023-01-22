@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">SuminComposition</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_text">Состав числа</string>
+    <string name="Desc">Правила игры:\nВам нужно найти число при сложении, которого\nсумма булдет равна числу в кружочке. Снизу\nбудут варианты ответов. Вам нужно нажать на квадратик с правильным ответом. Удачи!!!</string>
+    <string name="understand">Понятно</string>
+    <string name="choose_level_text">Выберите уровень</string>
+    <string name="test">Тест</string>
+    <string name="hard_text">Тяжелый</string>
+    <string name="normal_text">Средний</string>
+    <string name="easy_text">Легкий</string>
+    <string name="question">"?"</string>
+    <string name="right_answers">Правильных ответов %s (минимум %s)</string>
+    <string name="game_over">Game over</string>
+    <string name="answers_need">Необходимое количество правильных ответов: %s</string>
+    <string name="my_answers">Ваш счет: %s</string>
+    <string name="my_percent">Ваш процент правильных ответов: %s</string>
+    <string name="need_percent">Необходимый процент правильных ответов: %s</string>
+    <string name="retry">Попробовать снова</string>
+    <string name="question_mark">\?</string>
+    <string name="welcome_title">Состав числа</string>
+    <string name="game_rules">
+        Правила игры: перед вами будет три фигуры, две снизу и одна сверху, в двух из них будут
+        числа. Необходимо, чтобы сумма чисел из двух нижних фигур была равна числу в верхней фигуре,
+        для этого нужно вставить недостающее число.\n\nПример: в верхнем круге число 7, в одном
+        из нижних знак вопроса, а в другом число 4. Значит на месте вопросительного знака должно
+        быть число 3, потому что 3 + 4 = 7
+    </string>
+    <string name="button_understand">Понятно</string>
+    <string name="welcome_logo">Welcome logo</string>
+    <string name="choose_level_title">Выберите уровень:</string>
+    <string name="easy_level">Легкий</string>
+    <string name="normal_level">Средний</string>
+    <string name="hard_level">Тяжелый</string>
+    <string name="test_level">Тестовый</string>
+    <string name="score_answers">Ваш счет: %s</string>
+    <string name="score_percentage">Процент правильных ответов: %s</string>
+    <string name="required_percentage">Необходимый процент правильных ответов: %s</string>
+    <string name="required_score">Необходимое количество правильных ответов: %s</string>
+    <string name="progress_answers">Правильных ответов %s (минимум %s)</string>
 </resources>

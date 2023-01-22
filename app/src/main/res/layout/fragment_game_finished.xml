@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="gameResult"
+            type="com.example.sumincomposition.domain.entity_models.GameResult" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".presentation.GameFinishedFragment">
+
+        <ImageView
+            android:id="@+id/emoji_result"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_gravity=""
+            android:layout_margin="48dp"
+            android:contentDescription="@string/game_over"
+            android:src="@drawable/ic_smile" />
+
+        <TextView
+            android:id="@+id/tv_required_answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@{gameResult.gameSettings.minCountOfRightAnswersString}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_score_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@{gameResult.countOfRightAnswersString}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_required_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@{gameResult.gameSettings.minPercentOfRightAnswersString}"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_score_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/my_percent"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:text="@string/retry" />
+
+    </LinearLayout>
+</layout>
