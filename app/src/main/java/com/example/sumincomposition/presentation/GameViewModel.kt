@@ -41,13 +41,13 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
     val percentOfRightAnswers: LiveData<Int>
         get() = _percentOfRightAnswers
 
-    private val _progressAnswers = MutableLiveData<String>()
-    val progressAnswers: LiveData<String>
-        get() = _progressAnswers
-
     private val _enoughCount = MutableLiveData<Boolean>()
     val enoughCount: LiveData<Boolean>
         get() = _enoughCount
+
+    private val _progressAnswers = MutableLiveData<String>()
+    val progressAnswers: LiveData<String>
+        get() = _progressAnswers
 
     private val _enoughPercent = MutableLiveData<Boolean>()
     val enoughPercent: LiveData<Boolean>
@@ -88,15 +88,14 @@ class GameViewModel(application: Application) : AndroidViewModel(application) {
         )
 
         //снизу минимальный кол-во правильных ответов которые необходимы для победы типа Boolean
-        _enoughCount.value =
-            countOfRightAnswers >= gameSettings.minCountOfRightAnswers
+        _enoughCount.value = countOfRightAnswers >= gameSettings.minCountOfRightAnswers
 
         //снизу минимальный процент который необходим для победы типа Boolean
         _enoughPercent.value = percent >= gameSettings.minPercentOfRightAnswers
     }
 
     private fun calculatePercentOfRightAnswers(): Int {
-        if (countOfQuestions == 0){
+        if (countOfQuestions == 0) {
             return 0
         }
         //если бы мы не привели один их них к типу toDouble(toLong), то ответ всегда был бы 1 или 0

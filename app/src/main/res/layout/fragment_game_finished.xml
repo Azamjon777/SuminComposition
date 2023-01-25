@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <!--в этот xml придет обьект типа gameresult-->
         <variable
             name="gameResult"
             type="com.example.sumincomposition.domain.entity_models.GameResult" />
@@ -22,39 +22,44 @@
             android:layout_gravity=""
             android:layout_margin="48dp"
             android:contentDescription="@string/game_over"
-            android:src="@drawable/ic_smile" />
+            android:src="@drawable/ic_smile"
+            app:resultEmoji="@{gameResult.winner}" />
 
         <TextView
             android:id="@+id/tv_required_answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@{gameResult.gameSettings.minCountOfRightAnswersString}"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:requiredAnswers="@{gameResult.gameSettings.minCountOfRightAnswers}"
+            tools:text="@string/required_score" />
 
         <TextView
             android:id="@+id/tv_score_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@{gameResult.countOfRightAnswersString}"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:scoreAnswers="@{gameResult.countOfRightAnswers}"
+            tools:text="@string/score_answers" />
 
         <TextView
             android:id="@+id/tv_required_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@{gameResult.gameSettings.minPercentOfRightAnswersString}"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:requiredPercentage="@{gameResult.gameSettings.minPercentOfRightAnswers}"
+            tools:text="@string/required_percentage" />
 
         <TextView
             android:id="@+id/tv_score_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/my_percent"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:scorePercentage="@{gameResult}"
+            tools:text="@string/score_percentage" />
 
         <Button
             android:id="@+id/button_retry"
