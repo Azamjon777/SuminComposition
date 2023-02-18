@@ -5,7 +5,7 @@
     <string name="title_text">Состав числа</string>
     <string name="Desc">Правила игры:\nВам нужно найти число при сложении, которого\nсумма булдет равна числу в кружочке. Снизу\nбудут варианты ответов. Вам нужно нажать на квадратик с правильным ответом. Удачи!!!</string>
     <string name="understand">Понятно</string>
-    <string name="choose_level_text">Выберите уровень</string>
+    <string name="choose_level_text">Выберите уровень:</string>
     <string name="test">Тест</string>
     <string name="hard_text">Тяжелый</string>
     <string name="normal_text">Средний</string>
